@@ -8,6 +8,7 @@ import Icon from 'src/components/Icon';
 import Character from 'src/screens/Character';
 import Characters from 'src/screens/Characters';
 import Launch from 'src/screens/Launch';
+import Locations from 'src/screens/Locations';
 import Login from 'src/screens/Login';
 import Profile from 'src/screens/Profile';
 import {
@@ -15,12 +16,17 @@ import {
   MainTabParamList,
   CharactersStackParamList,
   ProfileStackParamList,
+  LocationsStackParamList,
 } from './types';
 
 const BottomTabNavigator = createBottomTabNavigator<MainTabParamList>();
 
 const CharactersStackNavigator =
   createNativeStackNavigator<CharactersStackParamList>();
+
+const LocationsStackNavigator =
+  createNativeStackNavigator<LocationsStackParamList>();
+
 const ProfileStackNavigator =
   createNativeStackNavigator<ProfileStackParamList>();
 
@@ -40,6 +46,21 @@ function CharactersStack(): JSX.Element {
         component={Character}
       />
     </CharactersStackNavigator.Navigator>
+  );
+}
+
+function LocationsStack(): JSX.Element {
+  return (
+    <LocationsStackNavigator.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <LocationsStackNavigator.Screen
+        name={'Locations'}
+        component={Locations}
+      />
+    </LocationsStackNavigator.Navigator>
   );
 }
 
@@ -79,6 +100,10 @@ function MainTab(): JSX.Element {
       <BottomTabNavigator.Screen
         name={'CharactersStack'}
         component={CharactersStack}
+      />
+      <BottomTabNavigator.Screen
+        name={'LocationsStack'}
+        component={LocationsStack}
       />
       <BottomTabNavigator.Screen
         name={'ProfileStack'}

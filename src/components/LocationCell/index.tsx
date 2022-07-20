@@ -1,6 +1,6 @@
 import React from 'react';
-import { Location } from 'src/data/models/location';
 import styled from 'styled-components/native';
+import { Location } from 'src/data/models/location';
 
 const Container = styled.View`
   padding: 20px;

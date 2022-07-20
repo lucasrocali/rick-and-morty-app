@@ -14,11 +14,16 @@ export type CharactersStackParamList = {
   };
 };
 
+export type LocationsStackParamList = {
+  Locations: undefined;
+};
+
 export type ProfileStackParamList = {
   Profile: undefined;
 };
 
 export type MainTabParamList = {
   CharactersStack: NavigatorScreenParams<CharactersStackParamList>;
+  LocationsStack: NavigatorScreenParams<LocationsStackParamList>;
   ProfileStack: NavigatorScreenParams<ProfileStackParamList>;
 };

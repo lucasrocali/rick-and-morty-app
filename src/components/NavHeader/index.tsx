@@ -6,9 +6,6 @@ const Container = styled.View`
   padding: 16px;
   border-bottom-width: 1px;
   border-color: ${({ theme }) => theme.color.gray.c400};
-`;
-
-const Content = styled.View`
   flex-direction: row;
 `;
 
@@ -37,18 +34,16 @@ interface NavHeaderProps {
 export default function NavHeader({ title, onGoBack }: NavHeaderProps) {
   return (
     <Container>
-      <Content>
-        <ButtonView>
-          {onGoBack ? (
-            <BackButtonIcon
-              testID={'backButtonIcon'}
-              onPress={() => onGoBack()}
-            />
-          ) : null}
-        </ButtonView>
-        <Title>{title}</Title>
-        <ButtonView></ButtonView>
-      </Content>
+      <ButtonView>
+        {onGoBack ? (
+          <BackButtonIcon
+            testID={'backButtonIcon'}
+            onPress={() => onGoBack()}
+          />
+        ) : null}
+      </ButtonView>
+      <Title>{title}</Title>
+      <ButtonView></ButtonView>
     </Container>
   );
 }

@@ -1,12 +1,16 @@
 import React from 'react';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import {
   useNavigation /*, useRoute, RouteProp*/,
 } from '@react-navigation/native';
-import { RootStackParamList } from 'src/navigation/types';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { LOCATION_1 } from 'src/data/mocks';
+import { LocationsStackParamList } from 'src/navigation/types';
 import LocationsLayout from './layout';
 
-type LocationsNavProp = NativeStackNavigationProp<RootStackParamList, 'Locations'>;
+type LocationsNavProp = NativeStackNavigationProp<
+  LocationsStackParamList,
+  'Locations'
+>;
 
 // type LocationsRouteProp = RouteProp<RootStackParamList, 'Locations'>;
 
@@ -16,5 +20,10 @@ export default function Locations() {
   //   params: { someParam },
   // } = useRoute<LocationsRouteProp>();
 
-  return <LocationsLayout onGoBack={() => navigation.goBack()} />;
+  return (
+    <LocationsLayout
+      locations={[LOCATION_1]}
+      onGoBack={() => navigation.goBack()}
+    />
+  );
 }

@@ -13,5 +13,6 @@ storiesOf('components/NavHeader', module).add('default', () => (
     <NavHeader title={'Home'} />
     <NavHeader title={'Profile'} />
     <NavHeader title={'Character'} onGoBack={action('onGoBack')} />
+    <NavHeader title={'Locations'} />
   </Container>
 ));

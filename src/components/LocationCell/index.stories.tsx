@@ -2,8 +2,8 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react-native';
 // import { action } from '@storybook/addon-actions';
 import styled from 'styled-components/native';
-import LocationCell from './';
 import { LOCATION_1, LOCATION_2, LOCATION_3 } from 'src/data/mocks';
+import LocationCell from './';
 
 const Container = styled.View`
   flex: 1;
