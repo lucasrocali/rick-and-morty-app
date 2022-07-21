@@ -48,6 +48,7 @@ export default function CharacterCell({
   return (
     <Container testID={testID} onPress={() => onPress()}>
       <Content>
+        <InfoText>{character.id}</InfoText>
         <NameText>{character.name}</NameText>
         <InfoText>{`Status: ${character.status}`}</InfoText>
         <InfoText>{`Species: ${character.species}`}</InfoText>

@@ -24,6 +24,14 @@ const Content = styled.View`
   justify-content: center;
 `;
 
+const Text = styled.Text`
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 48px;
+  font-family: ${({ theme }) => theme.fontFamily.inter.bold};
+  color: ${({ theme }) => theme.color.primary.c600};
+`;
+
 interface LoginLayoutProps {
   onLogin: (email: string, password: string) => void;
 }
@@ -36,6 +44,7 @@ export default function LoginLayout({ onLogin }: LoginLayoutProps) {
     <Container>
       <NavHeader title={t('login')} />
       <Content>
+        <Text>{'Rick and Morty'}</Text>
         <TextInput
           testID={'text-input-email'}
           value={email}
