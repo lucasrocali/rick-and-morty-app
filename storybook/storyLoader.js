@@ -8,6 +8,7 @@ function loadStories() {
   require('../src/components/Button/index.stories');
   require('../src/components/ButtonIcon/index.stories');
   require('../src/components/CharacterCell/index.stories');
+  require('../src/components/EpisodeCell/index.stories');
   require('../src/components/Icon/index.stories');
   require('../src/components/LocationCell/index.stories');
   require('../src/components/NavHeader/index.stories');
@@ -25,6 +26,7 @@ const stories = [
   '../src/components/Button/index.stories',
   '../src/components/ButtonIcon/index.stories',
   '../src/components/CharacterCell/index.stories',
+  '../src/components/EpisodeCell/index.stories',
   '../src/components/Icon/index.stories',
   '../src/components/LocationCell/index.stories',
   '../src/components/NavHeader/index.stories',
