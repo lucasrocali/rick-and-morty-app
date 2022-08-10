@@ -8,7 +8,13 @@ const Container = styled.View`
   border-color: ${({ theme }) => theme.color.gray.c500};
 `;
 
-const Text = styled.Text`
+const NameText = styled.Text`
+  font-family: ${({ theme }) => theme.fontFamily.inter.bold};
+  color: ${({ theme }) => theme.color.gray.c900};
+  font-size: 16px;
+`;
+
+const InfoText = styled.Text`
   font-family: ${({ theme }) => theme.fontFamily.inter.regular};
   color: ${({ theme }) => theme.color.gray.c900};
   font-size: 16px;
@@ -21,9 +27,9 @@ interface EpisodeCellProps {
 export default function EpisodeCell({ episode }: EpisodeCellProps) {
   return (
     <Container>
-      <Text>{episode.name}</Text>
-      <Text>{episode.air_date}</Text>
-      <Text>{episode.episode}</Text>
+      <NameText>{episode.name}</NameText>
+      <InfoText>{episode.air_date}</InfoText>
+      <InfoText>{episode.episode}</InfoText>
     </Container>
   );
 }

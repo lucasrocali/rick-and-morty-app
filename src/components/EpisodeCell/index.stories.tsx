@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react-native';
-// import { action } from '@storybook/addon-actions';
 import styled from 'styled-components/native';
 import { EPISODE_1, EPISODE_2, EPISODE_3 } from 'src/data/mocks';
 import EpisodeCell from './';

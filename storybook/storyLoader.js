@@ -15,6 +15,7 @@ function loadStories() {
   require('../src/screens/Base/layout.stories');
   require('../src/screens/Character/layout.stories');
   require('../src/screens/Characters/layout.stories');
+  require('../src/screens/Episodes/layout.stories');
   require('../src/screens/Launch/layout.stories');
   require('../src/screens/Locations/layout.stories');
   require('../src/screens/Login/layout.stories');
@@ -33,6 +34,7 @@ const stories = [
   '../src/screens/Base/layout.stories',
   '../src/screens/Character/layout.stories',
   '../src/screens/Characters/layout.stories',
+  '../src/screens/Episodes/layout.stories',
   '../src/screens/Launch/layout.stories',
   '../src/screens/Locations/layout.stories',
   '../src/screens/Login/layout.stories',
