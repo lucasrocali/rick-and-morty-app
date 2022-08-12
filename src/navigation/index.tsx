@@ -17,7 +17,9 @@ import {
   CharactersStackParamList,
   ProfileStackParamList,
   LocationsStackParamList,
+  EpisodesStackParamList,
 } from './types';
+import Episodes from 'src/screens/Episodes';
 
 const BottomTabNavigator = createBottomTabNavigator<MainTabParamList>();
 
@@ -29,6 +31,9 @@ const LocationsStackNavigator =
 
 const ProfileStackNavigator =
   createNativeStackNavigator<ProfileStackParamList>();
+
+const EpisodesStackNavigator =
+  createNativeStackNavigator<EpisodesStackParamList>();
 
 function CharactersStack(): JSX.Element {
   return (
@@ -61,6 +66,18 @@ function LocationsStack(): JSX.Element {
         component={Locations}
       />
     </LocationsStackNavigator.Navigator>
+  );
+}
+
+function EpisodesStack(): JSX.Element {
+  return (
+    <EpisodesStackNavigator.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <EpisodesStackNavigator.Screen name={'Episodes'} component={Episodes} />
+    </EpisodesStackNavigator.Navigator>
   );
 }
 
@@ -104,6 +121,10 @@ function MainTab(): JSX.Element {
       <BottomTabNavigator.Screen
         name={'LocationsStack'}
         component={LocationsStack}
+      />
+      <BottomTabNavigator.Screen
+        name={'EpisodesStack'}
+        component={EpisodesStack}
       />
       <BottomTabNavigator.Screen
         name={'ProfileStack'}

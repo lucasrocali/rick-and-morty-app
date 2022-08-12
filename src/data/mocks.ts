@@ -207,3 +207,5 @@ export const EPISODE_3: Episode = {
   url: 'https://rickandmortyapi.com/api/episode/3',
   created: '2017-11-10T12:56:34.022Z',
 };
+
+export const EPISODE_LIST = [EPISODE_1, EPISODE_2, EPISODE_3];
